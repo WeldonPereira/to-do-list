@@ -30,11 +30,25 @@ function App() {
     },
   ]);
 
+  const addTodo = (text, category) => {
+    const newTodos = [
+      ...todos,
+      {
+        id: Math.floor(Math.random() * 10000),
+        text,
+        category,
+        isCompleted: false,
+      },
+    ];
+
+    setTodos(newTodos);
+  };
+
   return (
     <div>
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <div className="max-w-2xl bg-white shadow-lg rounded-2xl mt-4 mx-auto py-6 px-4 sm:px-6 max-sm:mx-4 md:px-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4">
           Lista de Tarefas
         </h1>
         <div>
