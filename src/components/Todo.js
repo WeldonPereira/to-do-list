@@ -1,4 +1,4 @@
-const Todo = ({ todo }) => {
+const Todo = ({ todo, removeTodo }) => {
   return (
     <div>
       <div
@@ -13,7 +13,10 @@ const Todo = ({ todo }) => {
           <button className="bg-green-500 text-white text-sm py-1 px-2 rounded">
             Completar
           </button>
-          <button className="bg-red-600 text-white text-sm py-1 px-3 rounded">
+          <button
+            className="bg-red-600 text-white text-sm py-1 px-3 rounded"
+            onClick={() => removeTodo(todo.id)}
+          >
             X
           </button>
         </div>
