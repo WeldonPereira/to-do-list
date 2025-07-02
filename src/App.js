@@ -33,7 +33,7 @@ function App() {
   return (
     <div>
       <TodoForm />
-      <div className="max-w-2xl bg-white shadow-lg rounded-2xl mt-4 mx-auto py-6 px-4 sm:px-6 md:px-8">
+      <div className="max-w-2xl bg-white shadow-lg rounded-2xl mt-4 mx-auto py-6 px-4 sm:px-6 max-sm:mx-4 md:px-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-center">
           Lista de Tarefas
         </h1>
